@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "161922753788",
+    "project_id": "lamodacopy",
+    "storage_bucket": "lamodacopy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161922753788:android:5ef871629450860bbaa379",
+        "android_client_info": {
+          "package_name": "com.example.lamodacopy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtjJaheME2htEDed-uxo1DA8UUXRIZets"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

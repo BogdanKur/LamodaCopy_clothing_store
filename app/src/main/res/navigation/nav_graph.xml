@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.lamodacopy.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main"/>
+
+    <action
+        android:id="@+id/action_mainFragment_to_describeClothFragment"
+        app:destination="@id/describeClothFragment"/>
+
+    <fragment
+        android:id="@+id/catalogFragment"
+        android:name="com.example.lamodacopy.CatalogFragment"
+        android:label="catalog_fragment"
+        tools:layout="@layout/fragment_catalog">
+        <action
+            android:id="@+id/action_catalogFragment_to_describeClothFragment"
+            app:destination="@id/describeClothFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/bagFragment"
+        android:name="com.example.lamodacopy.BagFragment"
+        android:label="bag_fragment"
+        tools:layout="@layout/fragment_bag">
+        <action
+            android:id="@+id/action_bagFragment_to_describeClothFragment"
+            app:destination="@id/describeClothFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/electFragment"
+        android:name="com.example.lamodacopy.ElectFragment"
+        android:label="elect_fragment"
+        tools:layout="@layout/fragment_elect">
+        <action
+            android:id="@+id/action_electFragment_to_describeClothFragment"
+            app:destination="@id/describeClothFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/enterFragment"
+        android:name="com.example.lamodacopy.EnterFragment"
+        android:label="enter_fragment"
+        tools:layout="@layout/fragment_enter">
+
+        <action
+            android:id="@+id/action_enterFragment_to_sertificateFragment"
+            app:destination="@id/sertificateFragment"/>
+
+        <action
+            android:id="@+id/action_enterFragment_to_managingSubscriptionsFragment"
+            app:destination="@id/managingSubscriptionsFragment"/>
+
+        <action
+            android:id="@+id/action_enterFragment_to_countryFragment"
+            app:destination="@id/countryFragment"/>
+
+        <action
+            android:id="@+id/action_enterFragment_to_deliveryFragment"
+            app:destination="@id/deliveryFragment"/>
+
+        <action
+            android:id="@+id/action_enterFragment_to_supportCenterFragment"
+            app:destination="@id/supportCenterFragment"/>
+
+        <action
+            android:id="@+id/action_enterFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment"/>
+
+        <action
+            android:id="@+id/action_enterFragment_to_profileFragment"
+            app:destination="@id/profileFragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/notFragment"
+        android:name="com.example.lamodacopy.NotFragment"
+        android:label="not_fragment"
+        tools:layout="@layout/fragment_not">
+    </fragment>
+
+    <fragment
+        android:id="@+id/sertificateFragment"
+        android:name="com.example.lamodacopy.GiftSertificateFragment"
+        android:label="sertificate"
+        tools:layout="@layout/fragment_gift_sertificate">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/managingSubscriptionsFragment"
+        android:name="com.example.lamodacopy.managingSubscriptionsFragment"
+        android:label="managing subscriptions"
+        tools:layout="@layout/fragment_managing_subscriptions">
+
+        <action
+            android:id="@+id/action_managingSubscriptionsFragment_to_saleAndPromoFragment"
+            app:destination="@id/saleAndPromoFragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/countryFragment"
+        android:name="com.example.lamodacopy.CountryFragment"
+        android:label="country"
+        tools:layout="@layout/fragment_country">
+    </fragment>
+
+    <fragment
+        android:id="@+id/deliveryFragment"
+        android:name="com.example.lamodacopy.DeliveryFragment"
+        android:label="delivery"
+        tools:layout="@layout/fragment_delivery">
+
+        <action
+            android:id="@+id/action_deliveryFragment_to_pickupFragment"
+            app:destination="@id/pickupFragment"/>
+
+        <action
+            android:id="@+id/action_deliveryFragment_to_whereAreYouFragment"
+            app:destination="@id/whereAreYouFragment"/>
+
+        <action
+            android:id="@+id/action_deliveryFragment_to_coruierDeliveryDragment"
+            app:destination="@id/CoruierDeliveryFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/pickupFragment"
+        android:name="com.example.lamodacopy.PickupFragment"
+        android:label="pickup"
+        tools:layout="@layout/fragment_pickup">
+
+        <action
+            android:id="@+id/action_pickupFragment_to_fittingRoomYes"
+            app:destination="@id/FittingRoomYes"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/saleAndPromoFragment"
+        android:name="com.example.lamodacopy.SaleAndPromoFragment"
+        android:label="sale and promo"
+        tools:layout="@layout/fragment_sale_and_promo">
+
+        <action
+            android:id="@+id/action_saleAndPromoFragment_to_managingSubscriptionsFragment"
+            app:destination="@id/managingSubscriptionsFragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/whereAreYouFragment"
+        android:name="com.example.lamodacopy.WhereAreYouFragment"
+        android:label="where are you"
+        tools:layout="@layout/fragment_where_are_you">
+
+        <action
+            android:id="@+id/action_whereAreYouFragment_to_deliveryFragment"
+            app:destination="@id/deliveryFragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/FittingRoomYes"
+        android:name="com.example.lamodacopy.FittingRoomYesFragment"
+        android:label="fitting room yes"
+        tools:layout="@layout/fragment_fitting_room_yes">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/CoruierDeliveryFragment"
+        android:name="com.example.lamodacopy.CoruierDeliveryFragment"
+        android:label="coruier delivery"
+        tools:layout="@layout/fragment_coruier_delivery">
+
+        <action
+            android:id="@+id/action_courierDeliveryFragment_to_deliveryFragment"
+            app:destination="@id/deliveryFragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/supportCenterFragment"
+        android:name="com.example.lamodacopy.SupportCenterFragment"
+        android:label="support center"
+        tools:layout="@layout/fragment_support_center">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.lamodacopy.RegistrationFragment"
+        android:label="registration"
+        tools:layout="@layout/fragment_registration">
+
+        <action
+            android:id="@+id/action_registrationFragment_to_enterFragment"
+            app:destination="@id/enterFragment"/>
+
+        <action
+            android:id="@+id/action_registrationFragment_to_profileFragment"
+            app:destination="@id/profileFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.lamodacopy.ProfileFragment"
+        android:label="profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_NotFragment"
+            app:destination="@id/notFragment"/>
+        <action
+            android:id="@+id/action_profileFragment_to_ordersFragment"
+            app:destination="@id/ordersFragment"/>
+        <action
+            android:id="@+id/action_profileFragment_to_sertificateFragment"
+            app:destination="@id/sertificateFragment"/>
+        <action
+            android:id="@+id/action_profileFragment_to_countryFragment"
+            app:destination="@id/countryFragment"/>
+        <action
+            android:id="@+id/action_profileFragment_to_managingSubscriptionsFragment"
+            app:destination="@id/managingSubscriptionsFragment"/>
+        <action
+            android:id="@+id/action_profileFragment_to_supportCenterFragment"
+            app:destination="@id/supportCenterFragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.example.lamodacopy.OrderFragment"
+        android:label="order"
+        tools:layout="@layout/fragment_order">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/describeClothFragment"
+        android:name="com.example.lamodacopy.DescribeClothFragment"
+        android:label="describe"
+        tools:layout="@layout/fragment_describe_cloth">
+
+    </fragment>
+
+</navigation>

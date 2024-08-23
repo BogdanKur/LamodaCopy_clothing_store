@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <data>
+        <variable
+            name="profileFragmentViewModel"
+            type="com.example.lamodacopy.ProfileFragmentViewModel" />
+    </data>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        tools:context=".ProfileFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="?android:actionBarSize">
+
+                <ImageView
+                    android:id="@+id/btnProfileFromAvatar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/blackbuttonwithradius"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="@+id/btnProfileFromAvatar"
+                    app:layout_constraintStart_toStartOf="@+id/btnProfileFromAvatar"
+                    tools:ignore="MissingConstraints" />
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/btnProfileFromAvatar"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toEndOf="@+id/btnProfileFromAvatar"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btnNots"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/notificationssmall"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@color/white">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@color/white">
+
+
+                <TextView
+                    android:id="@+id/textViewLamodaClub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvLamodaClub"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/tvMySale(profileFragmentViewModel.percentSale)}"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    app:layout_constraintTop_toBottomOf="@id/textViewLamodaClub"
+                    tools:ignore="MissingConstraints" />
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
+                    android:background="@null"
+                    android:drawableRight="@drawable/materialtoolbar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/grey" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <Button
+                android:id="@+id/btnYourBuys"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_gradient"
+                android:text="@string/btnYourBuys"
+                android:textAllCaps="false"
+                android:gravity="center|start"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/btnSertificat1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_gradient"
+                app:layout_constraintTop_toBottomOf="@id/btnYourBuys"
+                android:text="@string/btnSertificate"
+                android:gravity="start|center"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:layout_gravity="top"
+                android:id="@+id/btnCountry1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_gradient"
+                app:layout_constraintTop_toBottomOf="@id/btnSertificat1"
+                android:text="@string/btnCountry"
+                android:gravity="start|center"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textAllCaps="false"
+                android:drawableRight="@drawable/russia1"/>
+
+
+            <Button
+                android:id="@+id/btnGift1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_gradient"
+                android:text="@string/btnGift"
+                app:layout_constraintTop_toBottomOf="@id/btnCountry1"
+                android:gravity="start|center"
+                android:paddingStart="10dp"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btnHelpCenter1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_gradient"
+                android:text="@string/btnHelpCenter"
+                app:layout_constraintTop_toBottomOf="@id/btnGift1"
+                android:gravity="start|center"
+                android:paddingStart="10dp"
+                android:textAllCaps="false"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="pickupFragmentViewModel"
+            type="com.example.lamodacopy.PickupFragmentViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context=".DeliveryFragment">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:id="@+id/toolbar"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <TextView
+                android:id="@+id/tvInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvPickup"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="31sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnCountryChoose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="@{@string/btnCountryChoose(pickupFragmentViewModel.pickupCountry)}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvInfo"
+                android:gravity="start|center"
+                android:textAllCaps="false"
+                android:textSize="18sp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/constraintLayout2"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayout1">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#bbbbbb"
+                tools:ignore="MissingConstraints"
+                android:id="@+id/view"/>
+
+            <TextView
+                android:id="@+id/tvChooseDelivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/tvFittingRoom"
+                android:textColor="@color/black"
+                android:textSize="27sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/btnPickup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/button_gradient"
+                android:gravity="start|center"
+                android:text="@string/btnYesFittingRoom"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvChooseDelivery"
+                android:drawableLeft="@drawable/fittingroomyes"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/btnCourierDelivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_gradient"
+                android:gravity="start|center"
+                android:text="@string/btnNoFittingRoom"
+                android:textAllCaps="false"
+                app:layout_constraintTop_toBottomOf="@id/btnPickup"
+                android:drawableLeft="@drawable/fittingroomno"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

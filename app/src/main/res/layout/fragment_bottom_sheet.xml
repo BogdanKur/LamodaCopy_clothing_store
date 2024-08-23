@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="26dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tvWriteUs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tvWriteUs"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvWantToAskUs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvWriteUs"
+            android:text="@string/tvWantToAskUs"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="14dp"/>
+
+        <TextView
+            android:id="@+id/tvUse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvWantToAskUs"
+            android:text="@string/tvUse"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/gray2"
+        android:layout_marginTop="11dp"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout1"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/view1"
+        tools:ignore="MissingConstraints"
+        android:background="@null">
+
+        <Button
+            android:id="@+id/btnTelegram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:textAllCaps="false"
+            android:gravity="start|center"
+            android:text="@string/btnTelegram"
+            android:drawableLeft="@drawable/telegramicon"/>
+
+        <Button
+            android:id="@+id/btnWhatsApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:textAllCaps="false"
+            android:gravity="start|center"
+            android:text="@string/btnWhatsApp"
+            app:layout_constraintTop_toBottomOf="@id/btnTelegram"
+            android:drawableLeft="@drawable/whatsappicon"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:background="@null"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout2"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

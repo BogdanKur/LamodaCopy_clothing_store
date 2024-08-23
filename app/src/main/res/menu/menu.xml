@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mainFragment"
+        android:icon="@drawable/home"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/catalogFragment"
+        android:icon="@drawable/saved"
+        android:title="@string/catalog" />
+    <item
+        android:id="@+id/bagFragment"
+        android:icon="@drawable/bag"
+        android:title="@string/bag"/>
+
+    <item
+        android:id="@+id/electFragment"
+        android:icon="@drawable/elect"
+        android:title="@string/elect" />
+
+    <item
+        android:id="@+id/enterFragment"
+        android:icon="@drawable/enter"
+        android:title="@string/enter"/>
+
+</menu>
